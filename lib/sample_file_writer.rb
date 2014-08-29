@@ -24,9 +24,9 @@ module SampleFileWriter
     def ascii
       #write single ascii chars in text form
       total_size = 0
-      File.open(options[:output_file], 'w') do | file |
+      File.open(options[:output_file], 'w:US-ASCII') do | file |
         while total_size < options[:size_bytes] do
-          total_size += file.write(rand(0xFF).chr)
+          total_size += file.write(rand(33..126).chr)
         end
       end
     end
