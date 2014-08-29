@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require 'sample_file_writer'
+SampleFileWriter::CLI.start(ARGV)
